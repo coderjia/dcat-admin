@@ -30,7 +30,7 @@ class Permission
 
         if (
             ! $user
-            || ! empty($args)
+            || empty($args)
             || ! config('admin.permission.enable')
             || $this->shouldPassThrough($request)
             || $user->isAdministrator()
